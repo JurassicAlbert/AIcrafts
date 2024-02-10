@@ -1,12 +1,20 @@
 from rest_framework import serializers
 
 from aicraft.models import ProductSite
+from aicraft.serializers.CompanySerializer import CompanySerializer
+from aicraft.serializers.PatternSerializer import PatternSerializer
+from aicraft.serializers.ProductSerializer import ProductSerializer
+from aicraft.serializers.ProductSizeSerializer import ProductSizeSerializer
 
 
 class ProductSiteSerializer(serializers.ModelSerializer):
     """
     Serializer for the ProductSite model.
     """
+    product = ProductSerializer()
+    company = CompanySerializer()
+    product_size = ProductSizeSerializer()
+    product_pattern = PatternSerializer()
 
     class Meta:
         model = ProductSite
