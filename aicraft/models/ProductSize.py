@@ -38,10 +38,10 @@ class ProductSize(models.Model):
                                      MinValueValidator(30)
                                  ])
     sleeve_height = models.DecimalField(default=1, max_digits=5, decimal_places=2,
-                                 validators=[
-                                     MaxValueValidator(100),
-                                     MinValueValidator(5)
-                                 ])
+                                        validators=[
+                                            MaxValueValidator(100),
+                                            MinValueValidator(5)
+                                        ])
 
     person_height = models.DecimalField(default=1, max_digits=5, decimal_places=2,
                                         validators=[
